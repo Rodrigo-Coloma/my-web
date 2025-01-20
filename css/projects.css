@@ -1,0 +1,106 @@
+.projects {
+    background-color: #1f1f20;
+    height: 100vh;
+    min-height: 300px;
+    margin-top: 20px;
+    width:100%;
+    display: grid;
+    grid-template-rows: repeat(1fr);
+    gap: 2vh
+
+
+}
+@keyframes reveal {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.project-container {
+    background-color: #434345;
+    border-radius: 1.5vh;
+    /*animation: slideInFromRight 1.22s ease-out;*/
+    margin-left: 5vw;
+    margin-right: 5vw;
+    max-width: 100%;
+    display: flex;
+    grid-template-columns:minmax(300px, 1fr) 2fr;
+    border: #61619e solid 0.3vw;
+    animation: reveal linear both; 
+    animation-timeline: view();
+    animation-range: entry 50% entry 100%;
+
+}
+
+.project-image-container {
+    max-width: 100%;
+    min-width: 300px;
+    text-decoration: none;
+    padding: 2vw;
+    box-sizing: border-box;
+    display: grid;
+
+
+}
+.project-description {
+    text-decoration: none;
+    padding:0;
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 1fr 10fr;
+    align-items: top;
+    overflow: hidden;
+    -ms-grid-column-span: 2;
+}
+
+@media (max-width: 600px) {
+    .project-container {
+        flex-direction: column;
+    }
+}
+
+
+.project-image {
+    border-radius: 1.5vh;
+    width: auto; /* Adjust the size of the image to the width of the column */
+    height: auto;
+    max-width: 100%;
+    max-height: 100%; /* Maintain the aspect ratio */
+    object-fit: contain;
+    overflow: hidden;
+    align-self: center;
+    box-sizing: border-box;
+    justify-self: center;
+}
+.project-container h3 {
+    font-size: 3vh;
+    color: rgb(78, 209, 143);
+    text-align: center;
+    box-sizing: border-box;
+    text-decoration: none;
+    margin:0;
+    width: 100%;
+}
+
+.project-container p {
+    padding: 1vh;
+    font-size: 2vh;
+    max-height: 22vh;
+    color: white;
+    text-align: center;
+    margin: 0;
+    overflow: scroll;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    box-sizing: border-box;
+    
+}
+
+a {
+    text-decoration: none; /* Remove text decoration from all anchor tags */
+    color: inherit; /* Ensure the text color is inherited */
+}

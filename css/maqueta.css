@@ -1,0 +1,239 @@
+
+
+p {
+    margin: 0;
+    font-size: 2vh;
+    padding: 0;
+}
+
+.title {
+    position: sticky; /* Sticky position */
+    top: 0; /* Stick to the top */
+    left: 0;
+    right: 0;
+    color: inherit;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    animation: dissapearTitle 1s linear both;
+    overflow: hidden;
+    background-color: #1f1f20; /* Ensure background color covers content */
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+.title h1 {
+    margin: 0;
+    font-size: 6vw;
+    font-weight: bold;
+    color: inherit;
+    width: 100%;
+    text-align: center;
+    margin-top: 1vh;
+}
+
+.title h2 {
+    font-size: 3vw;
+    animation: disapearTitle 1s linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 150px;
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+}
+
+@keyframes disapearTitle {
+    0% {
+    }
+    100% {
+        text-align: center;
+        overflow: hidden;
+        opacity: 0;
+    }
+}
+
+.title .profile {
+    width: 100vw;
+    position: absolute;
+}
+
+@keyframes enahnceSubtitle {
+    0% {
+        
+    }
+    100% {
+        color:#1f1f20;
+        background-color: white;
+
+    }
+}
+
+.subtitle {
+    font-size: 4vh;
+    font-weight: bold;
+    margin-top: 0;
+    animation: enahnceSubtitle 1s linear;
+    position:relative;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    animation-timeline: view();
+    animation-range: entry 100% entry 0%;
+}
+
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(+100%);
+        
+    }
+    100% {
+        transform: translateX(0);
+        
+    }
+
+}
+
+.banner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    align-items: baseline;
+    transition: .2s linear;
+    
+
+}
+
+
+@keyframes shrinkBanner {
+    0% {
+
+    }
+    100% {
+        height: 40%;
+    }
+    
+}
+
+
+
+.profile{
+    display:grid;
+    grid-template-rows: 1fr,1fr;
+    justify-content: bottom;
+
+}
+.profile-pic {
+    border-radius: 50%;
+    width: 18vw;
+    height: 18vw;
+    object-fit: cover;
+    margin: 2vw;
+    top:0;
+    right: 0;
+    left: 0;
+    animation: shrinkPicture 1s linear  both;
+    animation-timeline: scroll(root);
+    animation-range: 0 150px;
+}
+
+@keyframes shrinkPicture {
+    0% {
+        
+    }
+    100% {
+        width: 8vw;
+        height:8vw;
+        margin: 1vw
+    }
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.header {
+position: sticky;
+bottom: 0; 
+width: 100%;
+    
+
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 5vh;
+    background-color: #1f1f20;
+    color: rgb(168, 182, 182);
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    box-sizing: border-box;
+
+}
+
+.nav a {
+    flex: 1;
+    color: rgb(78, 209, 143);padding: 1vh;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+    height: 100%;
+    font-size: 2.2vh;
+    box-sizing: border-box;
+}
+
+.nav a:hover {
+    background-color: rgb(78, 209, 143);
+    color: #1f1f20;
+}
+
+.content {
+    margin-top: 1vh; 
+    position: absolute;
+    background-color: aqua;
+    margin: 100px;
+    display:flex;
+    flex-direction: column; /* For Internet Explorer and Edge */
+    max-width: 1800px;
+    width: 100vw;
+    height: 100%;
+    z-index: -100;
+    box-sizing: border-box;
+    top: 50vh;
+    position: absolute;
+}
+
+
+.content::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+
+.footer {
+    position: fixed; /* Fixed position */
+    bottom: 0; /* Stick to the bottom */
+    left: 0;
+    right: 0;
+    background-color: #1f1f20; /* Ensure background color covers content */
+    color: rgb(214, 243, 243);
+    text-align: center;
+    padding: 1vh 0;
+    z-index: 1000; /* Ensure it stays on top */
+}
